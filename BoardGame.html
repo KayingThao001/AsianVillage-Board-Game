@@ -42,12 +42,19 @@
 
     }
 
-    function generatrStartMember(){//will pick 1 member to roll the dice first at random
+    function generateStartMember(){//will pick 1 member to roll the dice first at random
 
     }
     
     function startButton(){//will make a button to start the entire game(used only once)
-
+        function makeButton(btnText, choice){
+            let button = document.createElement("button");
+            button.innerHTML = btnText;
+            buttonContainer.appendChild(button);
+            button.addEventListener ("click", function() {
+                history.push(choice);
+            });
+        }
     }
     
     
