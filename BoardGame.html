@@ -13,18 +13,26 @@
         <h1>
             Asian Village 
         </h1>
+
+        <h2>
+            Choose your Player down below.
+        </h2>
     </div>
 
 
+    <button onclick="button()">Press to start</button>
+
+
+    <p id="demo"></p>
 
 
 
 <script>
-
     var BackgroundColor = "Red";//changes the color of the background
 
     document.body.style.backgroundColor=BackgroundColor
     
+    rollDice();
     
     function choosePlayerFunction(){//this function allows the player to choose their own peices to play
 
@@ -39,27 +47,22 @@
     }
     
     function rollDice(){//allows the dice to be rolled
-
+            var diceRoll= Math.floor(Math.random() * 6) +1;
+            alert('You rolled a '+ diceRoll);
+        
     }
 
     function generateStartMember(){//will pick 1 member to roll the dice first at random
 
     }
+document.getElementById("demo").innerHTML = players;
     
-    function startButton(){//will make a button to start the entire game(used only once)
-        function makeButton(btnText, choice){
-            let button = document.createElement("button");
-            button.innerHTML = btnText;
-            buttonContainer.appendChild(button);
-            button.addEventListener ("click", function() {
-                history.push(choice);
-            });
-        }
+    
+    function buttons(){
+        var players = ["Yang   ", "   Thao   ", "   Xiong   ", "   Lor   ", "   Vang   ", "   Lee   ", "   Her   ", "   Moua   "];
+        var result = players.fontcolor("pink");
+        document.getElementById("demo").innerHTML = result;
     }
-    
-    
-    
-    
     
     
     
